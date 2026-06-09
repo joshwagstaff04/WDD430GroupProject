@@ -1,0 +1,155 @@
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header {
+  background: white;
+  border-bottom: 1px solid #e3d9c9;
+  padding: 16px 0;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #8b5e3c;
+}
+
+.nav {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.nav a:hover {
+  color: #8b5e3c;
+}
+
+.loginBtn {
+  background: #8b5e3c;
+  color: white !important;
+  padding: 8px 16px;
+  border-radius: 8px;
+}
+
+.pageTitle {
+  font-size: 2rem;
+  padding: 40px 0 24px;
+}
+
+.filters {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+
+.searchInput {
+  flex: 1;
+  min-width: 200px;
+  padding: 10px 14px;
+  border: 1px solid #e3d9c9;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: white;
+}
+
+.select {
+  padding: 10px 14px;
+  border: 1px solid #e3d9c9;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: white;
+}
+
+.priceInput {
+  width: 120px;
+  padding: 10px 14px;
+  border: 1px solid #e3d9c9;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: white;
+}
+
+.searchInput:focus,
+.select:focus,
+.priceInput:focus {
+  outline: none;
+  border-color: #8b5e3c;
+}
+
+.noResults {
+  color: #6b5d52;
+  text-align: center;
+  padding: 60px 0;
+}
+
+.productGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 24px;
+  padding-bottom: 60px;
+}
+
+.productCard {
+  background: white;
+  border: 1px solid #e3d9c9;
+  border-radius: 12px;
+  overflow: hidden;
+  display: block;
+}
+
+.productCard:hover {
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.productImage {
+  background: #d9c7ad;
+  height: 180px;
+  display: flex;
+  align-items: flex-end;
+  padding: 10px;
+}
+
+.category {
+  background: #6b8f6e;
+  color: white;
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.productInfo {
+  padding: 16px;
+}
+
+.productInfo h3 {
+  font-size: 1.1rem;
+  margin-bottom: 4px;
+}
+
+.sellerName {
+  color: #6b5d52;
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+}
+
+.price {
+  color: #8b5e3c;
+  font-weight: 700;
+}
+
+.footer {
+  background: #3a2e25;
+  color: #efe7d8;
+  padding: 32px 0;
+  text-align: center;
+}
