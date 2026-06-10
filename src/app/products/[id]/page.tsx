@@ -25,7 +25,7 @@ export default function ProductDetailPage() {
 
   function handleReviewSubmit(e: React.FormEvent) {
     e.preventDefault();
-    if (rating === 0) return;
+    if (rating === 0 || comment.trim() === "") return;
     const newReview = { id: Date.now(), user: "You", rating, comment };
     setReviews([...reviews, newReview]);
     setRating(0);
@@ -60,7 +60,7 @@ export default function ProductDetailPage() {
               Sold by{" "}
               <Link href={`/sellers/${product.seller.id}`}>{product.seller.name}</Link>
             </p>
-            <button className={styles.btnPrimary}>Add to Cart</button>
+            <button className={styles.btnPrimary}>Contact Seller</button>
           </div>
         </div>
 
