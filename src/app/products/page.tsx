@@ -27,7 +27,7 @@ export default function ProductsPage() {
       p.name.toLowerCase().includes(search.toLowerCase()) ||
       p.seller.toLowerCase().includes(search.toLowerCase());
     const matchesCategory = selectedCategory === "All" || p.category === selectedCategory;
-    const matchesPrice = maxPrice === "" || p.price <= parseInt(maxPrice);
+    const matchesPrice = maxPrice === "" || p.price <= parseFloat(maxPrice);
     return matchesSearch && matchesCategory && matchesPrice;
   });
 
