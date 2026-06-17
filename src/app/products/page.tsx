@@ -75,6 +75,8 @@ export default function ProductsPage() {
           />
         </div>
 
+        <p className={styles.resultCount}>Showing {filtered.length} of {allProducts.length} products</p>
+
         {filtered.length === 0 ? (
           <p className={styles.noResults}>No products found.</p>
         ) : (

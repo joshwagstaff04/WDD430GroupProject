@@ -114,6 +114,12 @@
   border-color: #8b5e3c;
 }
 
+.resultCount {
+  color: #6b5d52;
+  font-size: 0.9rem;
+  margin-bottom: 16px;
+}
+
 .noResults {
   color: #6b5d52;
   text-align: center;
