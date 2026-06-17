@@ -23,7 +23,9 @@ export default function ProductsPage() {
   const [maxPrice, setMaxPrice] = useState("");
 
   const filtered = allProducts.filter((p) => {
-    const matchesSearch = p.name.toLowerCase().includes(search.toLowerCase()) || p.seller.toLowerCase().includes(search.toLowerCase());
+    const matchesSearch =
+      p.name.toLowerCase().includes(search.toLowerCase()) ||
+      p.seller.toLowerCase().includes(search.toLowerCase());
     const matchesCategory = selectedCategory === "All" || p.category === selectedCategory;
     const matchesPrice = maxPrice === "" || p.price <= parseInt(maxPrice);
     return matchesSearch && matchesCategory && matchesPrice;
@@ -53,17 +55,17 @@ export default function ProductsPage() {
             onChange={(e) => setSearch(e.target.value)}
             className={styles.searchInput}
           />
-
-          <select
-            value={selectedCategory}
-            onChange={(e) => setSelectedCategory(e.target.value)}
-            className={styles.select}
-          >
-            {categories.map((c) => (
-              <option key={c} value={c}>{c}</option>
+          <div className={styles.chips}>
+            {categories.map((cat) => (
+              <button
+                key={cat}
+                className={`${styles.chip} ${selectedCategory === cat ? styles.chipActive : ""}`}
+                onClick={() => setSelectedCategory(cat)}
+              >
+                {cat}
+              </button>
             ))}
-          </select>
-
+          </div>
           <input
             type="number"
             placeholder="Max price"

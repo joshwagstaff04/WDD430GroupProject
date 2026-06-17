@@ -47,31 +47,61 @@
 
 .filters {
   display: flex;
-  gap: 16px;
+  flex-direction: column;
+  gap: 12px;
   margin-bottom: 32px;
-  flex-wrap: wrap;
 }
 
 .searchInput {
-  flex: 1;
-  min-width: 200px;
   padding: 10px 14px;
   border: 1px solid #e3d9c9;
   border-radius: 8px;
   font-size: 1rem;
   background: white;
+  width: 100%;
+  max-width: 400px;
 }
 
-.select {
-  padding: 10px 14px;
+.searchInput:focus {
+  outline: none;
+  border-color: #8b5e3c;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chip {
+  background: #f5f0e8;
   border: 1px solid #e3d9c9;
-  border-radius: 8px;
-  font-size: 1rem;
-  background: white;
+  color: #3a2e25;
+  padding: 5px 14px;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  cursor: pointer;
+  font-family: var(--font-body);
+}
+
+.chip:hover {
+  border-color: #8b5e3c;
+  color: #8b5e3c;
+}
+
+.chipActive {
+  background: #8b5e3c;
+  border-color: #8b5e3c;
+  color: white;
+}
+
+.chipActive:hover {
+  background: #6f4a2e;
+  border-color: #6f4a2e;
 }
 
 .priceInput {
-  width: 120px;
+  width: 140px;
   padding: 10px 14px;
   border: 1px solid #e3d9c9;
   border-radius: 8px;
@@ -79,8 +109,6 @@
   background: white;
 }
 
-.searchInput:focus,
-.select:focus,
 .priceInput:focus {
   outline: none;
   border-color: #8b5e3c;
